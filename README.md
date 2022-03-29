@@ -1,7 +1,8 @@
-# Youtube Scum Cleaner
-- A project by shabman
+# Youtube Protection
+- A project by shab#1753 (Discord)
 
-*Removes scum bags from your comment section to protect your community*
+*Removes unwanted from your comment section to protect your community*
 
 # TODO: 
+ - Setup Command Manager (DONE AT 17:00 GMT + 1)
  - Tutorial when done
