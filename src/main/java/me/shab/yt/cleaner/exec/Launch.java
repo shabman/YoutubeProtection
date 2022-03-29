@@ -1,5 +1,9 @@
 package me.shab.yt.cleaner.exec;
 
+import me.shab.yt.cleaner.commands.TestCommand;
+import me.shab.yt.cleaner.commands.manager.CommandManager;
+import me.shab.yt.cleaner.templates.Command;
+
 public class Launch {
 	
 	private static final String[][] CLI_COMMANDS = {
@@ -11,11 +15,16 @@ public class Launch {
 	};
 	
 	public static void main(String[] args) {
+		
+		final CommandManager manager = new CommandManager(new Command[] {new TestCommand()});
+		
 		String command = args[0].toLowerCase();
 		if (command.equalsIgnoreCase(CLI_COMMANDS[0][0])) {
 			for (int i = 0; i < CLI_COMMANDS.length - 1; i++) {
 				System.out.print(CLI_COMMANDS[i][0] + CLI_COMMANDS[i][1]);
 			}
+		} else {
+			manager.handle(command);
 		}
 	}
 }
